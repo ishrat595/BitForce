@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>INSPECTRA - Food Storage Guide</title>
+
+    <link rel="icon" href="inpectra.jpg.jpg">
+
+    <style>
+        body {
+            background-image: url("background.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            width: 80%;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 8px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #112233, #1a3a4b);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(25, 24, 24, 0.3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+        }
+
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+
+        #current {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input {
+            width: 300px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #333;
+            color: white;
+        }
+
+        .text-danger {
+            color: red;
+            font-weight: bold;
+        }
+
+        .text-warning {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .text-success {
+            color: green;
+            font-weight: bold;
+        }
+        input[type=button],input[type=reset]{
+            width: auto;
+            display: inline;
+            
+
+        }
+        input[type="button"]:hover {
+            background: #0056b3;
+        }
+        input[type="reset"]:hover {
+            background: #0056b3;
+        }
+        #table{
+            background-color: #4ade80;
+        }
+        #form{
+            background-color: #0056b3;
+        }
+        #h3{
+            color: rgb(112, 41, 55);
+        }
+        #img{
+            display: inline;
+        }
+    </style>
+
+</head>
+
+<body
+    style="background-image: url(inspect\ 3.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <nav class="navbar">
+        <a href="1. home.html">Home</a>
+        <a href="2. food standards.html">Food Quality Guide</a>
+        <a href="3. Inspection.html">Inspection</a>
+        <a href="4. storageguide.html"><span id="current">Food Storage Guide</span></a>
+        <a href="5. contact.html">Contact</a>
+    </nav>>
+
+    <div>
+
+        <h1>INSPECTRA</h1>
+
+        <h2>Food Storage Guide</h2>
+        <h3 id="h3">"Enter your <b>Defect level </b> and <b>Water activity</b> values to see <b>How you can store the food</b>, or how it should have been stored <b>If it has already spoiled</b>."</h3>
+
+        <p>
+            Proper food storage helps keep food <b>fresh</b>, <b>safe</b> and
+            <i>nutritious</i>. Storing food at the correct
+            <span>temperature</span> and <span>moisture level</span> reduces spoilage
+            and prevents the growth of harmful microorganisms.
+        </p>
+        <center id="img"><img src="storage pic.jpg" alt="Food Storage" width="400">
+            <img src="spoilage.jpg" alt="Food Spolage" width="400">
+            <img src="food spolage.jpg" alt="Food spolage" width="300">
+        </center>
+
+<center>
+    <h2 id="form"> <b>Food Inspection Form</b></h2>
+
+        <div class="form-group">
+            <label> Obtained Defect Level:</label>
+            <input type="number" id="defectLevel" placeholder="Enter defect level">
+        </div>
+
+        <div class="form-group">
+            <label>Obtained Water Activity (aw):</label>
+            <input type="number" id="awInput" step="0.01" placeholder="Enter water activity">
+        </div>
+
+        <input type="button" value="Submit" onclick=processFormData()>
+<input type="reset" value="Reset">
+        <h3 id="table"> <b>Inspection History Table</b></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Defect Level</th>
+                    <th>Defect Status</th>
+                    <th>aw</th>
+                    <th>aw Status</th>
+                    <th>Overall Condition</th>
+                    <th>Storage Guide</th>
+                </tr>
+            </thead>
+            <tbody id="outputTableBody"></tbody>
+        </table>
+</center>
+        
+        <script>
+function processFormData() {
+    let defectLevel = document.getElementById("defectLevel").value;
+    let aw = document.getElementById("awInput").value;
+
+    if (defectLevel === "" || aw === "") {
+        alert("Please fill all required fields!");
+        return;
+    }
+
+    let defectStatus = "";
+    let awStatus = "";
+    let overallCondition = "";
+    let storageGuide = "";
+    let statusClass = "";
+
+    if (defectLevel > 3) {
+        defectStatus = "Danger Position";
+    } else {
+        defectStatus = "Normal Position";
+    }
+
+    if (aw > 0.85) {
+        awStatus = "High Danger Position";
+    } else {
+        awStatus = "Normal Position";
+    }
+
+    if (defectLevel > 3 && aw > 0.85) {
+        overallCondition = "Food Has Been Wasted";
+        storageGuide = "Discard immediately due to heavy defects and high moisture risk.";
+        statusClass = "text-danger";
+    } else if (defectLevel > 3) {
+        overallCondition = "Food Has Been Wasted";
+        storageGuide = "Reject batch. Excessive physical defects render product unsafe.";
+        statusClass = "text-danger";
+    } else if (aw > 0.85) {
+        overallCondition = "High Risk / Spoiling Fast";
+        storageGuide = "Freeze or dehydrate immediately to lower water activity below 0.85.";
+        statusClass = "text-warning";
+    } else {
+        overallCondition = "Safe & Fresh";
+        storageGuide = "Store in a cool, dry place inside an airtight container.";
+        statusClass = "text-success";
+    }
+
+    let table = document.getElementById("outputTableBody");
+    let row = table.insertRow();
+
+    row.insertCell(0).innerText = defectLevel;
+    row.insertCell(1).innerText = defectStatus;
+    row.insertCell(2).innerText = aw;
+    row.insertCell(3).innerText = awStatus;
+    row.insertCell(4).innerHTML = `<span class="${statusClass}">${overallCondition}</span>`;
+    row.insertCell(5).innerText = storageGuide;
+}
+</script>
+
+
+
+
+
+
+
+        <hr>
+
+        <h2>General Storage Tips</h2>
+
+        <ul>
+            <li>Keep refrigerated foods in the refrigerator.</li>
+            <li>Store dry foods in a cool and dry place.</li>
+            <li>Always check the expiry date before use.</li>
+            <li>Keep raw meat and fish separate from cooked food.</li>
+            <li>Use clean and airtight containers whenever possible.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Storage Guide for Common Foods</h2>
+
+        <table>
+
+            <tr>
+                <th>Food</th>
+                <th>Storage Temperature</th>
+                <th>Moisture</th>
+                <th>Freshness</th>
+                <th>Storage Place</th>
+            </tr>
+
+            <tr>
+                <td>Milk</td>
+                <td>0°C - 4°C</td>
+                <td>High</td>
+                <td>2 - 5 days</td>
+                <td>Refrigerator</td>
+            </tr>
+
+            <tr>
+                <td>Meat</td>
+                <td>0°C - 4°C</td>
+                <td>High</td>
+                <td>3 - 5 days</td>
+                <td>Refrigerator</td>
+            </tr>
+
+            <tr>
+                <td>Fish</td>
+                <td>0°C - 2°C</td>
+                <td>High</td>
+                <td>1 - 2 days</td>
+                <td>Refrigerator</td>
+            </tr>
+
+            <tr>
+                <td>Egg</td>
+                <td>4°C - 7°C</td>
+                <td>Medium</td>
+                <td>3 - 5 weeks</td>
+                <td>Refrigerator</td>
+            </tr>
+
+            <tr>
+                <td>Potato</td>
+                <td>7°C - 10°C</td>
+                <td>Low</td>
+                <td>1 - 2 months</td>
+                <td>Cool, Dry Place</td>
+            </tr>
+
+        </table>
+
+        <hr>
+
+        <h2>Important Tips</h2>
+
+        <ol>
+            <li>Do not keep milk outside for a long time.</li>
+            <li>Cook meat and fish before the freshness period ends.</li>
+            <li>Do not wash eggs before storing them.</li>
+            <li>Store potatoes away from direct sunlight.</li>
+            <li>Throw away food with a bad smell or unusual color.</li>
+        </ol>
+
+        <hr>
+
+
+        <h2>Useful Links</h2>
+
+        <ul>
+            <li><a href="https://bfsa.gov.bd" target="_blank">BFSA Official Website</a></li>
+            <li><a href="https://bsti.gov.bd" target="_blank">BSTI Official Website</a></li>
+        </ul>
+
+        <hr>
+
+        
+    
+
+</body>
+
+</html>

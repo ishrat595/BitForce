@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Inspection Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #112233, #1a3a4b);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        #current {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .title, .Activity {
+            color: rgb(58, 46, 139);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-group, .field {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input[type="button"], input[type="reset"] {
+            width: 50%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+       
+        input[type="button"]:hover {
+            background: #0056b3;
+        }
+        input[type="reset"]:hover {
+            background: #0056b3;
+        }
+
+        #outputBox {
+            margin-top: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .status-pass {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-fail {
+            color: red;
+            font-weight: bold;
+        }
+        #formula{
+            background-color: yellowgreen;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+    </style>
+</head>
+
+<body style="background-image: url('inspect 3.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+    <nav class="navbar">
+        <a href="1. home.html">Home</a>
+        <a href="2. food standards.html">Food Quality Guide</a>
+        <a href="3. Inspection.html" > <span id="current">Inspection</span></a>
+        <a href="4. storageguide.html">Food Storage Guide</a>
+        <a href="5. contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="title">Food Inspection Form & Table Output</h2>
+            
+            <form id="inspectionForm">
+                <div class="form-group">
+                    <label for="batchId">Batch ID</label>
+                    <input type="text" id="batchId" placeholder="e.g., B-9402">
+                </div>
+
+                <div class="form-group">
+                    <label for="food">Food Item Classification</label>
+                    <select id="food">
+                        <option value="Meat">Meat</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Eggs">Eggs</option>
+                        <option value="Rice">Rice</option>
+                        <option value="Potato">Potato</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Banana">Banana</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="storageTemp">Storage Temperature (°C)</label>
+                    <input type="number" id="storageTemp" value="25">
+                </div>
+
+                <div class="form-group">
+                    <label for="moistureContent">Moisture Content Rate (%)</label>
+                    <input type="number" id="moistureContent" value="2">
+                </div>
+
+                <div class="form-group">
+                    <label>Freshness Profile: <span id="freshnessVal">100</span>%</label>
+                    <input type="range" id="freshness" min="0" max="100" value="100"
+                           oninput="document.getElementById('freshnessVal').innerText=this.value">
+                </div>
+
+                <div class="form-group">
+                    <label for="defectLevel">Visible Defect Level (0-10)</label>
+                    <input type="number" id="defectLevel" value="1">
+                </div>
+
+                <h3 class="Activity">Water Activity Calculator</h3>
+                <center>
+                    <h3 id="formula">Formula: Water Activity = Partial vapor pressure of water in food (kPa)/Partial vapor pressure of surrounding air (kPa)</h5>
+
+                </center>
+               
+
+                <div class="field">
+                    <label for="pFood">Partial vapor pressure of water in food (kPa)</label>
+                    <input type="number" id="pFood" step="any" placeholder="e.g., 2.07">
+                </div>
+
+                <div class="field">
+                    <label for="pSat">Partial vapor pressure of surrounding air (kPa)</label>
+                    <input type="number" id="pSat" step="any" placeholder="e.g., 2.34">
+                </div>
+
+                <div class="btn-container">
+                    <input type="button" onclick="processFormData()" value="Generate Table & Run Check">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+
+            <div id="outputBox">
+                <div>Water Activity (aw): <span id="awOutput">-</span></div>
+                <div>Condition: <span id="status">-</span></div>
+                <div>Inspection Status: <span id="finalResult">-</span></div>
+            </div>
+
+            <h3 style="margin-top:20px;">Inspection History Table</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Batch ID</th>
+                        <th>Food</th>
+                        <th>Defect</th>
+                        <th>Freshness</th>
+                        <th>aw</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="outputTableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function processFormData() {
+            let batchId = document.getElementById("batchId").value;
+            let food = document.getElementById("food").value;
+            let storageTemp = document.getElementById("storageTemp").value;
+            let moistureContent = document.getElementById("moistureContent").value;
+            let freshness = document.getElementById("freshness").value;
+            let defectLevel = document.getElementById("defectLevel").value;
+            let pFood = document.getElementById("pFood").value;
+            let pSat = document.getElementById("pSat").value;
+
+           
+            if (batchId === "" || defectLevel === "" || storageTemp === "" || moistureContent === "" || pFood === "" || pSat === "") {
+                alert("Please fill all required fields!");
+                return;
+            }
+
+           
+            let aw = pFood / pSat;
+            document.getElementById('awOutput').innerText = aw.toFixed(2);
+
+         
+            if (aw < 0.60) {
+                document.getElementById('status').innerText = "Microbiologically Stable (Safe)";
+            } else if (aw >= 0.60 && aw <= 0.85) {
+                document.getElementById('status').innerText = "Molds & Yeasts can grow";
+            } else if (aw > 0.85 && aw <= 1.00) {
+                document.getElementById('status').innerText = "High moisture (Bacteria growth risk)";
+            } else {
+                document.getElementById('status').innerText = "Invalid Pressure Values";
+            }
+
+            
+            let finalStatus = "";
+            let statusClass = "";
+
+            if (defectLevel <= 3 && aw <= 0.85) {
+                finalStatus = "PASS";
+                statusClass = "status-pass";
+            } else {
+                finalStatus = "FAIL";
+                statusClass = "status-fail";
+            }
+
+            document.getElementById('finalResult').innerHTML = `<span class="${statusClass}">${finalStatus}</span>`;
+
+           
+            let table = document.getElementById("outputTableBody");
+            let row = table.insertRow();
+
+            row.insertCell(0).innerText = batchId;
+            row.insertCell(1).innerText = food;
+            row.insertCell(2).innerText = defectLevel;
+            row.insertCell(3).innerText = freshness + "%";
+            row.insertCell(4).innerText = aw.toFixed(2);
+            row.insertCell(5).innerHTML = `<span class="${statusClass}">${finalStatus}</span>`;
+        }
+    </script>
+</body>
+</html>

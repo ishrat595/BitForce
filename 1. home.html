@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .ins {
+            color: chartreuse;
+        }
+
+        .moral {
+            color: yellow;
+        }
+
+
+        .p {
+            font-size: 20px;
+
+            color: white;
+            background-color: red;
+        }
+
+        .navi {
+            font-size: 20px;
+            color: yellow;
+        }
+
+        .quoate {
+            font-size: 20px;
+            color: blue;
+        }
+
+        th {
+            background-color: blueviolet;
+            color: azure;
+        }
+
+        td {
+            background-color: aqua;
+            color: black;
+        }
+
+        th:hover {
+            background-color: chartreuse;
+        }
+
+        td:hover {
+            background-color: yellow;
+        }
+
+        .ob {
+            color: yellow;
+            outline-color: red;
+            outline-width: 5px;
+            font-size: 30px;
+            background-color: blueviolet;
+
+        }
+
+        .wel {
+            color:blue;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-weight: 500px;
+            font-size: 90px;
+
+            text-align: center;
+            text-shadow: red;
+        }
+
+        .cat {
+            color:yellow;
+            outline: black transparent;
+            font-size: 20px;
+            background-color: blueviolet;
+        }
+
+        .centered-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+
+        .centered-list {
+            text-align: left;
+            display: inline-block;
+            padding-left: 20px;
+        }
+
+
+        .objectives-title {
+            color:yellow;
+            outline-width: 5px;
+            outline-color: red;
+            font-size: 30px;
+            background-color: blueviolet;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #112233, #1a3a4b);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+        }
+
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .ol1 {
+            text-align: center;
+        }
+
+
+        .navbar a:hover {
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+
+        #current {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+
+        .video-container {
+            flex: 1 1 320px;
+            max-width: 500px;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #imp{
+            background-color: blueviolet;
+            color: yellow;
+        }
+    </style>
+
+    <title>INSPECTRA - Home</title>
+
+    <link rel="icon" href="inpectra.jpg.jpg">
+
+</head>
+
+<body
+    style="background-image: url(inspect\ 3.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <nav class="navbar">
+        <a href="1. home.html"> <span id="current">Home</span></a>
+        <a href="2. food standards.html">Food Quality Guide </a>
+        <a href="3. Inspection.html">Inspection</a>
+        <a href="4. storageguide.html">Food Storage Guide</a>
+        <a href="5. contact.html">Contact</a>
+    </nav>
+
+    <center>
+
+        <h1 class="ins">INSPECTRA</h1>
+
+        <h2 class="moral">Food Quality Inspection System</h2>
+
+        <img src="inpectra.jpg.jpg" width="250" height="180">
+
+        <hr width="80%">
+
+        <h3 class="wel"> <i>Welcome</i></h3>
+        <div class="video-grid">
+            <div class="video-container">
+                <iframe width="560" height="315" src="copy video inspection 1.mp4"
+                    title="Food Safety Standards & Inspection" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="inspection copy 2.mp4"
+                    title="Restaurant Food Safety Inspection Walkthrough" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture ;web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="inspection copy 3.mp4" title="Food Safety & Hygiene Inspection Rules"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+
+
+        <p class="p">
+            <b>INSPECTRA</b> is a simple educational website about
+            <b>food quality inspection, food safety, food storage,
+                and food standards.</b>
+            The purpose of this website is to create awareness
+            about safe food practices and help people understand
+            how food quality is maintained.
+        </p>
+
+        <img src="giphy.gif" width="350" height="250">
+
+    </center>
+    <hr>
+
+
+
+    <div class="centered-section">
+        <h2 class="objectives-title">Objectives of INSPECTRA</h2>
+        <ol class="centered-list"><b>
+             <li>Provide basic knowledge about food quality.</li>
+            <li>Explain food inspection procedures.</li>
+            <li>Promote safe food handling.</li>
+            <li>Teach proper food storage methods.</li>
+            <li>Create awareness about healthy food habits.</li>
+
+        </b>
+           
+        </ol>
+    </div>
+
+
+
+
+    <hr>
+    <div class="centered-section">
+        <h3 id="imp">Why Food Quality is Important?</h3>
+
+        <p> <b>
+             Food quality ensures that food is safe, fresh,
+            nutritious and suitable for consumption.
+            Poor quality food can cause food poisoning,
+            health problems and financial loss.
+            Regular inspection helps maintain food standards
+            and protects consumers.
+        </b>
+
+           
+
+        </p>
+    </div>
+
+
+    <hr>
+    <div class="centered-section">
+        <h3 class="objectives-title">Main Features of SPECTRA</h3>
+
+        <ul class="centered-list">
+            <b>
+                <li>Simple inspection guidelines</li>
+
+            <li>Food quality standards</li>
+
+            <li>Food storage tips</li>
+
+            <li>Educational information</li>
+
+            <li>Easy navigation</li>
+
+            </b>
+
+            
+        </ul>
+
+    </div>
+
+
+    <hr>
+    <div class="centered-section">
+        <h3 class="cat">Food Categories</h3>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+
+                <th>Food Type</th>
+
+                <th>Examples</th>
+
+                <th>Storage</th>
+
+            </tr>
+
+            <tr>
+
+                <td>Fruits</td>
+
+                <td>Apple, Mango, Banana</td>
+
+                <td>Cool and Dry Place</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Vegetables</td>
+
+                <td>Carrot, Tomato, Cabbage</td>
+
+                <td>Refrigerator</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Dairy</td>
+
+                <td>Milk, Cheese, Butter</td>
+
+                <td>Refrigerator</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Meat</td>
+
+                <td>Chicken, Beef, Fish</td>
+
+                <td>Freezer</td>
+
+            </tr>
+
+        </table>
+    </div>
+
+
+
+    <hr>
+
+    <center>
+
+        <h3>Inspection Section</h3>
+
+        <p>Click the image below to learn about food inspection.</p>
+
+        <a href="inspection.html">
+
+            <img src="inspect.jpg" width="300" height="200">
+
+        </a>
+
+    </center>
+
+    <hr>
+
+    <center>
+
+        <h3 class="quoate">Food Safety Quote</h3>
+        <h3><b>"SAFE FOOD TODAY, HEALTHY TOMORROW"</b></h3>
+        <img src="quote.jpg" alt="quote" height="200px" width="280">
+
+      
+        <hr>
+
+
+        <p>
+
+            <b>INSPECTRA</b><br>
+
+            Food Quality Inspection System<br>
+
+           
+
+        </p>
+
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>INSPECTRA - Contact</title>
+    <link rel="icon" href="inpectra.jpg.jpg">
+
+    <style>
+        body {
+            background-image: url("");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            width: 70%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+
+        }
+
+        th {
+            background-color: orange;
+        }
+
+        input,
+        textarea {
+            width: 95%;
+        }
+
+        span {
+            color: rgb(205, 12, 12);
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 50%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input[type=submit],
+        input[type=button],
+        input[type=reset]:hover {
+
+
+            cursor: pointer;
+            transition: 0.5s;
+
+
+        }
+
+        input,
+        textarea {
+            border-radius: 5px;
+            background-color: bisque;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #112233, #1a3a4b);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+        }
+
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+
+        #current {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            color: #4ade80;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+        }
+    </style>
+
+</head>
+
+<body
+    style="background-image: url(inspect\ 3.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <nav class="navbar">
+        <a href="1. home.html">Home</a>
+        <a href="2. food standards.html">Food Quality Guide</a>
+        <a href="3. Inspection.html">Inspection</a>
+        <a href="4. storageguide.html">Food Storage Guide</a>
+        <a href="5. contact.html"> <span id="current">Contact</span></a>
+    </nav>
+
+
+    <div>
+
+        <h1>Contact INSPECTRA</h1>
+
+        <p>
+            We value your <b>feedback</b> and <b>suggestions</b>.
+            If you have any questions regarding <i>food safety</i> or <i>food standards</i>,
+            please contact us using the form below.
+
+
+        </p>
+
+        <h2>Official Contact Information</h2>
+
+        <table>
+
+            <tr>
+                <th>Organization</th>
+                <th>Contact</th>
+            </tr>
+
+            <tr>
+                <td>BFSA Office</td>
+                <td>+8802-222223459</td>
+            </tr>
+
+            <tr>
+                <td>BFSA Helpline</td>
+                <td>16155</td>
+            </tr>
+
+            <tr>
+                <td>BSTI Office</td>
+                <td>+8802-8870277</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <h2>Feedback Form</h2>
+
+        <form action="https://formspree.io/f/mjybejkj" method="post">
+
+            <label for=" First Name">First Name <span>*</span></label><br>
+            <input type=" First Name" id=" Fisrt Name" name=" First Name"><br><br>
+            <label for="Last Name"> Last Name <span>*</span></label><br>
+            <input type="Last name" id="Last Name" name="Last Name"><br><br>
+            <label for="Email">Enter your Email <span>*</span></label><br>
+            <input type="Email" id="Email" name="Email" placeholder="e.g.ishrateramoni@gmail.com"><br><br>
+
+            <label for="phone"> Phone No</label><br>
+            <input type="tell" id="phone" placeholder="+8801XYYYYYYYY" pattern="\+8801[3-9][0-9]{8}">
+
+            <br><br>
+            <label for="address">Address</label>
+            <input type="text" name="add" id="add" placeholder=" House no,Road no,City">
+
+            <br><br>
+
+            <label>Describe Your Problem</label><br>
+            <textarea rows="5"></textarea>
+
+            <br>
+
+
+            <br>
+
+            <div class="btn-container">
+                <input type="Submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+
+        <br>
+
+
+
+        <p>
+            <b>Thank you</b> for visiting <span>INSPECTRA</span>. Together, we can promote <b>SAFE</b> and <b>QUALITY
+                FOOD</b>
+        </p>
+
+
+
+    </div>
+
+</body>
+
+</html>
