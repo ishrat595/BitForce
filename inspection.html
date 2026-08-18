@@ -53,6 +53,7 @@
             color: rgb(58, 46, 139);
             font-size: 28px;
             margin-bottom: 15px;
+             text-align: center;
         }
 
         .card {
@@ -151,6 +152,13 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
 
         }
+         #ins{
+            border: 3px solid red;
+           
+        }
+        #test{
+            color: red;
+        }
     </style>
 </head>
 
@@ -166,7 +174,31 @@
 
     <div class="container">
         <div class="card">
-            <h2 class="title">Food Inspection Form & Table Output</h2>
+            <h2 class="title">Food Quality Inspection & Testing Form</h2>
+              <div >
+    <h3 id="test"> Testing Guidelines & Instructions</h3>
+    <table id="ins">
+
+        <tr>
+
+            <td><b>Water Activity Measurement</b></td>
+           
+            <td>Measure water activity (a <sub>w</sub>) using a digital Chilled Mirror Dew Point Water Activity Meter or a resistive electrolytic sensor instrument.</td>
+        </tr>
+        <tr>
+
+            <td> <b>Freshness Profile</b></td>
+           
+            <td >Can be evaluated manually through sensory inspection (color, texture, odor) or via industrial automated sensors (TVB-N / Electronic Nose).</td>
+        </tr>
+        <tr>
+
+            <td> <b>Usage Purpose</b></td>
+           
+            <td> Designed for both industrial quality control (QC) and manual laboratory testing protocols.</td>
+        </tr>
+    </table>
+  </div>
             
             <form id="inspectionForm">
                 <div class="form-group">
